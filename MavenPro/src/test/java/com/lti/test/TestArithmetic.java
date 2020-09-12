@@ -2,22 +2,27 @@ package com.lti.test;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import com.lti.code.Arithmetic;
 
 public class TestArithmetic {
-     private Arithmetic arth;
+	private Arithmetic art;
 	
-     @Before
-     public void init() {
-    	 arth=new Arithmetic();
-     }
-     
-     
-	 @Test
-	 public void testSum() {
-		 assertEquals(10, arth.sum(4, 6));
-	 }
+	@Before
+	public void init(){
+		art=new Arithmetic();
+			
+	}
+	@Test
+	public void TestSum() {
+		assertEquals(10,art.sum(4, 6));
+		
+	}
+	@Test
+	public void Testmax() {
+		assertEquals(20,art.min(30, 20));
+	}
+	
+
 }
